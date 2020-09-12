@@ -1,0 +1,116 @@
+body {
+    background: #1f2a2e;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+.bg-dark {
+    background: #1f2a2e !important;
+}
+.navbar-brand {
+    font-size:1.5rem;
+}
+.navbar-brand sup {
+    color: #a3b80b;
+    font-size: .8rem;
+}
+#pesquisa {
+    background: #1f2b2e;
+    border: 1px solid #a3b80b;
+}
+#lista_wrapper {
+    margin: 3rem;
+}
+#lista {
+    width: 100% !important;
+    background: white;
+    font-size:.9rem;
+    border-radius: 5px;
+}
+#lista_filter {
+    text-align: center;
+}
+div.dataTables_filter input {
+    margin-left: 0;
+    display: inline-block;
+    width: auto;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}    
+#lista tr:hover td, .hovered {
+    background: #ddea7d;
+    cursor: pointer;
+} 
+#lista th {
+    background: #eee;
+}
+#lista td, th {
+    padding:1rem 1rem;
+}
+#lista thead tr{
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px 5px 0 0;
+}
+#lista thead tr th:first-child {
+    -moz-border-top-left-radius: 5px;
+    -webkit-border-top-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+#lista thead tr th:last-child {
+    -moz-border-top-right-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#lista tbody tr:last-child td:last-child {
+    -moz-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#lista tbody tr:last-child td:first-child {
+    -moz-border-bottom-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+ul.pagination {
+    justify-content: center !important;
+    margin-top: 2rem !important;
+}
+.modal-header h5 {
+    font-weight: 700;
+}
+.modal-header {
+    border: none;
+    padding: 1rem 1rem 0rem 1rem;
+}
+.modal-body {
+    padding: 0rem 1rem 1rem 1rem;   
+}
+.modal-body p {
+    opacity: .5;
+    width: 90%;
+    line-height: 1.2rem;
+    padding: .3rem 0rem;
+}
+.modal-body img {
+    max-width: 100%;
+    border-radius: .5rem;
+    margin-bottom:1rem;
+}
+.modal-body td:nth-child(odd) {
+    width: 30%;
+    display: table-cell;
+    color: #7d8a1f;
+    padding-top: .3rem;
+    font-size: .9rem;
+    text-transform: uppercase;
+}
+.modal-body tr:last-child td:last-child {
+    text-transform: lowercase;
+}
+.page-item .page-link {
+    color: #a3b80b;
+}
+.page-item.active .page-link {
+    background-color: #a3b80b;
+    border-color: #a3b80b;
+}
