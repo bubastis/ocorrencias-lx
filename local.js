@@ -29,14 +29,26 @@ $(document).ready( function () {
             { data: 'properties.tipo' },
             { data: 'properties.area' },
             { data: 'properties.freg_descricao' },
-            { data: 'properties.state' }
-        ],
-        responsive: {
-            details: {
-                display: $.fn.dataTable.Responsive.display.modal(),
-                renderer: $.fn.dataTable.Responsive.renderer.tableAll()
+            { data: 'properties.state',
+              render: function ( data, type, full ){
+                  if (data == "Resolvido") {
+                      return '<span class="badge badge-success">' + data + '</span>'
+                  }
+                  else if (data == "Em execução") {
+                      return '<span class="badge badge-warning">' + data + '</span>'   
+                  }
+                  else if (data == "Em análise") {
+                    return '<span class="badge badge-danger">' + data + '</span>'   
+                  }
+                  else if (data == "Registado para Resolução") {
+                    return '<span class="badge badge-info">Registado</span>'   
+                  }
+                  else {
+                      return data;
+                  }
+              }
             }
-        }
+        ]
     });
 
     // var table = $('#mytable').DataTable();
@@ -47,7 +59,6 @@ $(document).ready( function () {
         $(".modal-title").text("Ocorrência Nº" + data.properties.id);
         $('.modal-body').empty();
         $(".modal-body").append("<p>" + data.properties.area + " → " + data.properties.tipo + "</p>");
-        console.log(data.geometry)
         $(".modal-body").append("<img alt='static Mapbox map of the San Francisco bay area' src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/pin-l+000(" + data.geometry.coordinates[0] + "," + data.geometry.coordinates[1] + ")/" + data.geometry.coordinates[0] + "," + data.geometry.coordinates[1] + ",18,0.00,0.00/1000x600@2x?access_token=pk.eyJ1IjoiZWFzdDE5OTkiLCJhIjoiY2l5dW96ZXZxMDFyMzM4bXl6MDI3M2liOSJ9.zN_d4GPduMmFnsFDYuNnGw' ></img>")
         $(".modal-body").append("<table><tbody>");
         $(".modal-body").append("<tr><td>Freguesia</td><td>" + data.properties.freg_descricao + "</td></tr>");

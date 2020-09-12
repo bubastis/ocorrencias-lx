@@ -43,7 +43,7 @@ div.dataTables_filter input {
     background: #eee;
 }
 #lista td, th {
-    padding:1rem 1rem;
+    padding:1rem 1rem !important;
 }
 #lista thead tr{
     -moz-border-radius: 5px;
@@ -110,7 +110,21 @@ ul.pagination {
 .page-item .page-link {
     color: #a3b80b;
 }
+.sorting_1:before {
+    display: none !important;
+}
 .page-item.active .page-link {
     background-color: #a3b80b;
     border-color: #a3b80b;
 }
+.badge {
+    line-height: inherit !important;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 600px) {
+    #lista_wrapper {
+        margin: 1rem;
+    }
+
+  }
