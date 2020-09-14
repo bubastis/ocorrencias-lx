@@ -15,6 +15,7 @@
         <link rel="stylesheet" type="text/css" href="local.css"/> 
         <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
         <script type="text/javascript" src="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/dt-1.10.21/r-2.2.5/datatables.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
         
 
     </head>
@@ -43,8 +44,11 @@
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" id="pesquisa" type="search" placeholder="Pesquisar.." aria-label="Search">
             </form>
-            </nav>
-          
+        </nav>
+
+        <div class="counters ct-chart">
+            <span>Últimas ocorrências por freguesia</span>
+        </div>  
         <table id="lista" class="display table">
             <thead>
                 <tr>
@@ -67,5 +71,6 @@
         </table>
 
         <script src="local.js" async defer></script>
+        <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     </body>
 </html>
