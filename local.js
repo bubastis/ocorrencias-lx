@@ -63,10 +63,59 @@ function makeChart(json) {
     var areaCounted = Array.from(areaCounting.keys());
     var areaCountedNames = Array.from(areaCounting.values());
 
-    new Chartist.Bar('.ct-chart', {
-        labels: areaCounted,
-        series: [areaCountedNames]
-    });  
+    var ctx = document.getElementById("v-bargraph");
+
+    var barChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: areaCounted,
+            datasets: [{
+                data: areaCountedNames,
+                backgroundColor: "#00A0DD"
+            }]
+        },
+        options: {
+            maintainAspectRatio: false,
+            legend: {display:false},
+            tooltips: {enabled: true},
+            spanGaps: false,
+            title: {
+                display: true,
+                text: 'Ocorrências por freguesia',
+                fontColor: '#999999',
+                fontFamily: '"Kumbh Sans", sans-serif',
+                fontStyle: 'normal',
+                fontSize: 14
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                      display:false,
+                      offsetGridLines: true,
+                      color: "#333333"
+                    },
+                    ticks: {
+                      beginAtZero:true,
+                      fontColor: "#a3b809",
+                      display: false
+                    }
+                 }],
+               yAxes: [{
+                ticks: {
+                  beginAtZero:true,
+                  offsetGridLines: true,
+                  fontColor: "#999999",
+                  precision: 0,
+                  maxTicksLimit: 4
+                },
+                gridLines: {
+                  color: "#333333",
+                  display:false,
+                  zeroLineColor: "#333333"}
+                }]
+            }
+        }
+    });
 }
 
 $('#lista tbody').on('click', 'tr', function () {
