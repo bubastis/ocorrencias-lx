@@ -1,4 +1,4 @@
-name: fetcher
+name: fetchmyjson
 inputs:
   - name: dataDir
     required: true
