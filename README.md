@@ -41,7 +41,7 @@ Thanks to the Netlify plugin "fetchmyjson" (based on [netlify-plugin-fetch-feeds
  
 ### Websites
 
-The website is hosted by Netlify at:
+The website is hosted by Netlify at:   
 https://ocorrencias-lx.netlify.app
 
 A version using only Mapbox GL JS is also being developed at:    
