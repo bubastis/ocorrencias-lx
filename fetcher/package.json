@@ -1,0 +1,16 @@
+{
+  "name": "fetcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "fetcher"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "fetch": "^1.1.0",
+    "fs": "0.0.1-security"
+  }
+}
