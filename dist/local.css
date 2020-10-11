@@ -15,6 +15,7 @@ body {
 #pesquisa {
     background: #1f2b2e;
     border: 1px solid #a3b80b;
+    color: #ccc;
 }
 #lista_wrapper {
     margin: 2rem;
