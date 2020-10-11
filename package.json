@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "netlify-plugin-fetch-feeds": "^0.2.3"
+  }
+}

@@ -1,0 +1,21 @@
+[build] # Make sure you don't have a duplicate [build] context!
+ # functions = "functions/"
+  publish = "dist"
+
+[dev] # Make sure you don't have a duplicate [build] context!
+ # functions = "functions/"
+
+# Config for the Netlify Build Plugin: netlify-plugin-fetch-feeds
+[[plugins]]
+  package = "netlify-plugin-fetch-feeds"
+
+[plugins.inputs]
+# Where should data files reside
+dataDir = "dist/data"
+
+# All the feeds we wish to gather for use in the build
+
+[[plugins.inputs.feeds]]
+	name = "lx"
+	url = "https://gisapps.cm-lisboa.pt/arcgisapps/rest/services/GOPI_Maps_Secure/NaMinhaRuaRead_PROD/MapServer/0/query?where=1%3D1&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=id%2Cnumero%2Crequerente%2Cemail%2Clocal%2Creferencia%2Cdescricao%2Ctipo%2Carea%2Cfreg_descricao%2Cstate&returnGeometry=true&returnTrueCurves=false&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&orderByFields=id+DESC&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&resultOffset=&resultRecordCount=500&f=geojson"
+	ttl = 3600
