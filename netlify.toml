@@ -7,7 +7,7 @@
 
 # Config for the Netlify Build Plugin: netlify-plugin-fetch-feeds
 [[plugins]]
-  package = "fetchmyjson"
+  package = "/plugins/fetchmyjson"
 
 [plugins.inputs]
 # Where should data files reside
