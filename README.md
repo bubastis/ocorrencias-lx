@@ -1,5 +1,7 @@
 ![](screenshot.png)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ff1e69c1-aed1-455c-8400-a49839964fb2/deploy-status)](https://app.netlify.com/sites/ocorrencias-lx/deploys) ![occo](https://github.com/bubastis/ocorrencias-lx/workflows/occo/badge.svg?event=schedule)
+
 ## Na Minha Rua V2 🇵🇹
 
 ### O que é?
@@ -42,8 +44,5 @@ Thanks to the Netlify plugin "fetchmyjson" (based on [netlify-plugin-fetch-feeds
 The website is hosted by Netlify at:
 https://ocorrencias-lx.netlify.app
 
-A version using only Mapbox GL JS is also being developed at:
+A version using only Mapbox GL JS is also being developed at:    
 https://ocorrencias-lx-mapa.netlify.app
-   
-    
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ff1e69c1-aed1-455c-8400-a49839964fb2/deploy-status)](https://app.netlify.com/sites/ocorrencias-lx/deploys) ![occo](https://github.com/bubastis/ocorrencias-lx/workflows/occo/badge.svg?event=schedule)
