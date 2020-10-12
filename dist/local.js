@@ -14,8 +14,8 @@ var table = $('#lista').DataTable({
             "last":       "Fim",
             "next":       "Seguinte",
             "previous":   "Anterior"
-        }
-        
+        },
+        zeroRecords: "Pesquisa sem resultados."
         },
     "pageLength": 100, 
     columns: [
@@ -63,9 +63,9 @@ function makeChart(json) {
     var areaCounting = areas.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
     var areaCounted = Array.from(areaCounting.keys());
     var areaCountedNames = Array.from(areaCounting.values());
+    document.getElementById("chartload").remove();
 
     var ctx = document.getElementById("v-bargraph");
-
     var barChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -82,11 +82,12 @@ function makeChart(json) {
             spanGaps: false,
             title: {
                 display: true,
-                text: 'Ocorrências por freguesia',
+                text: 'Últimas ocorrências por freguesia',
                 fontColor: '#999999',
                 fontFamily: '"Kumbh Sans", sans-serif',
                 fontStyle: 'normal',
-                fontSize: 14
+                fontSize: 14,
+                textTransform: 'uppercase'
             },
             scales: {
                 xAxes: [{
