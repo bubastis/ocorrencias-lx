@@ -19,17 +19,20 @@ var table = $('#lista').DataTable({
         },
     "pageLength": 100, 
     columns: [
-        { data: 'properties.id'},
+        { data: 'properties.id', className: 'oco', 
+            render: function ( data, type, full ) {
+                return '<span class="ocotxt">' + data + '</span>'
+            }},
         { data: 'properties.numero', visible: false},
         { data: 'properties.requerente' , visible: false},
         { data: 'properties.email', visible: false },
         { data: 'properties.local', visible: false },
         { data: 'properties.referencia', visible: false },
         { data: 'properties.descricao' , visible: false},
-        { data: 'properties.tipo' },
-        { data: 'properties.area' },
-        { data: 'properties.freg_descricao' },
-        { data: 'properties.state',
+        { data: 'properties.tipo', className: 'tipo' },
+        { data: 'properties.area', className: 'area' },
+        { data: 'properties.freg_descricao', className: 'freguesia' },
+        { data: 'properties.state', className: 'estado', 
             render: function ( data, type, full ){
                 if (data == "Resolvido") {
                     return '<span class="badge badge-success">' + data + '</span>'

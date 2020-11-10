@@ -124,8 +124,9 @@ ul.pagination {
     border-color: #a3b80b;
 }
 .badge {
-    vertical-align: text-bottom;
     padding: .4rem .6rem;
+    font-weight: 400;
+    font-size: 80%;
 }
 #chart {
     margin: 1rem auto;
@@ -162,12 +163,81 @@ ul.pagination {
 
   }
 @media only screen and (max-width: 600px) {
-    #lista_wrapper {
-        margin: 1rem;
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        margin: 0;
     }
-    .chart {
-        height: 150px;
-        width: 90%;
+    #chart {
+        display: none;
+    }
+    .form-inline {
+        width: 100%;
+    }
+    #lista_wrapper {
+        margin: 0rem 1rem 1rem 1rem;
+    }
+    #lista {
+        background: transparent;
+        font-size: 1rem;
+    }
+    #lista thead {
+        display: none;
+    }
+    #lista tr {
+        margin-bottom: 1rem;
+        display: block;
+        background: white;
+        border-radius: .25rem;
+        padding: 1rem;
+        position: relative;
+    }
+    #lista tr:hover td, .hovered {
+        background: transparent;
+    }
+    #lista tr:active {
+        transform: scale(1.05);
+        background: #ccc;
+    }
+    #lista td {
+        display: block;
+        border: none !important;
+        padding:0rem !important;
+    }
+    #lista td:before {
+        opacity: .75;
+        text-transform: uppercase;
+        font-size: .8rem;
+        display: block;
+        color: #a3b80b;
+    }
+    .oco {
+        font-weight: 600;
+        margin-bottom:1rem;
+    }
+    .ocotxt:before {
+        content: 'Ocorrência '
+    }
+    .area:before {
+        content: 'Área';
+    }
+    .tipo:before {
+        content: 'Tipo'
+    }
+    .freguesia:before {
+        content: 'Freguesia'
+    }
+    .estado {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+    }
+    ul.pagination {
+        font-size:90%;
+        margin-top:0rem !important;
+    }
+    .page-item:not(#lista_previous):not(#lista_next) {
+        display:none;
     }
 
   }
